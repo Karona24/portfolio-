@@ -6,21 +6,23 @@
             <div class="row align-items-center min-vh-100">
 
                 <!-- TEXT CONTENT -->
-                <div class="col-lg-6 col-md-6 col-12 order-2 order-md-1" data-aos="fade-right data-aos=fade-right">
+                <div class="col-lg-6 col-md-6 col-12 order-2 order-md-1" data-aos="fade-right">
                     <div class="card bg-transparent" data-aos="fade-right">
                     <div class="hero-content" > 
                         <h1 class="hero-title">
                             Hello, I'm
-                            <span class="text-info">Noeun</span>
+                            <span class="edit-color">Noeun</span>
                             <br />
-                            <span class="text-info">Karona</span>
+                            <span class="edit-color">Karona</span>
                         </h1>
 
-                        <h4 class="hero-subtitle">
-                            Creative Full Stack Developer
-                        </h4>
-
                         <p class="hero-description">
+                            <div class="h4 d-flex align-items-center gap-2 col-sm-center">
+                            <span>Creative :</span>
+                            <span class="hero-subtitle edit-color">
+                                Full Stack Developer
+                            </span>
+                            </div>
                             Passionate about building modern web applications and creating
                             clean, responsive, and user-friendly digital experiences.
                             I enjoy learning new technologies and transforming ideas into
@@ -542,5 +544,40 @@ import FooterView from '@/components/component/FooterView.vue'
   --pbd: .15s;
   --pex: -24px;
 }
+/* animation title */
+.hero-subtitle {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #00d4ff;
+    border-right: 2px solid #00d4ff;
 
+    animation:
+        typing 3s steps(20) infinite alternate,
+        blink .7s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 20ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+.h4{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.edit-color{
+    color: #00bfff !important;
+}
 </style>
