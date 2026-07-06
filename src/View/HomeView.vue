@@ -20,7 +20,7 @@
                             <div class="h4 d-flex align-items-center gap-2 col-sm-center">
                             <span>Creative :</span>
                             <span class="hero-subtitle edit-color">
-                                Full Stack Developer
+                                Full Stack Web Developer
                             </span>
                             </div>
                             Passionate about building modern web applications and creating
