@@ -7,65 +7,64 @@
 
                 <!-- TEXT CONTENT -->
                 <div class="col-lg-6 col-md-6 col-12 order-2 order-md-1" data-aos="fade-right">
-                    <div class="card bg-transparent" data-aos="fade-right">
-                    <div class="hero-content" > 
-                        <h1 class="hero-title">
-                            Hello, I'm
-                            <span class="edit-color">Noeun</span>
-                            <br />
-                            <span class="edit-color">Karona</span>
-                        </h1>
+                    <div class="card bg-transparent border-0" data-aos="fade-right">
+                        <div class="hero-content"> 
+                            <h1 class="hero-title">
+                                Hello, I'm
+                                <br class="d-none d-sm-inline d-md-none d-xl-inline"/>
+                                <span class="edit-color">Noeun</span>
+                                <span class="edit-color"> Karona</span>
+                            </h1>
 
-                        <p class="hero-description">
-                            <div class="h4 d-flex align-items-center gap-2 col-sm-center">
-                            <span>Creative :</span>
-                            <span class="hero-subtitle edit-color">
-                                Full Stack Web Developer
-                            </span>
-                            </div>
-                            Passionate about building modern web applications and creating
-                            clean, responsive, and user-friendly digital experiences.
-                            I enjoy learning new technologies and transforming ideas into
-                            real-world solutions.
-                        </p>
-
-                        <div class="hero-buttons d-flex gap-4">
-                            <a class="fancy" href="#">
-                                <span class="top-key"></span>
-                                <span class="text">View My Work</span>
-                                <span class="bottom-key-1"></span>
-                                <span class="bottom-key-2"></span>
-                            </a>
-                            <!-- From Uiverse.io by Nawsome -->
-                            <button class="continue-application">
-                                <div>
-                                    <div class="pencil"></div>
-                                    <div class="folder">
-                                        <div class="top">
-                                            <svg viewBox="0 0 24 27">
-                                                <path
-                                                    d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z">
-                                                </path>
-                                            </svg>
-                                        </div>
-                                        <div class="paper"></div>
-                                    </div>
+                            <!-- Fixed: Changed from <p> to <div> to solve HTML nested validation warning -->
+                            <div class="hero-description">
+                                <div class="h4 d-flex align-items-center gap-2 subtitle-wrapper">
+                                    <span>Creative:</span>
+                                    <span class="hero-subtitle edit-color">Full Stack Web Developer</span>
                                 </div>
-                                Continue Application
-                            </button>
+                                <p class="mb-0 mt-3">
+                                    Passionate about building modern web applications and creating
+                                    clean, responsive, and user-friendly digital experiences.
+                                    I enjoy learning new technologies and transforming ideas into
+                                    real-world solutions.
+                                </p>
+                            </div>
+
+                            <div class="hero-buttons d-flex gap-4">
+                                <a class="fancy" href="#">
+                                    <span class="top-key"></span>
+                                    <span class="text">View My Work</span>
+                                    <span class="bottom-key-1"></span>
+                                    <span class="bottom-key-2"></span>
+                                </a>
+                                <!-- From Uiverse.io by Nawsome -->
+                                <button class="continue-application">
+                                    <div>
+                                        <div class="pencil"></div>
+                                        <div class="folder">
+                                            <div class="top">
+                                                <svg viewBox="0 0 24 27">
+                                                    <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="paper"></div>
+                                        </div>
+                                    </div>
+                                    Continue Application
+                                </button>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
 
                 <!-- IMAGE -->
-                <div class="col-lg-6 col-md-6 col-12 order-1 order-md-2">
-                    <div class="card bg-transparent" data-aos="fade-left">
-                    <div class="image-wrapper">
-                        <div class="pic">
-                            <img src="../image/photo_2026-05-10_15-08-40.jpg" alt="Noeun Karona" />
+                <div class="col-lg-6 col-md-6 col-12 order-1 order-md-2 mb-4 mb-md-0">
+                    <div class="card bg-transparent border-0" data-aos="fade-left">
+                        <div class="image-wrapper">
+                            <div class="pic">
+                                <img src="../image/photo_2026-05-10_15-08-40.jpg" alt="Noeun Karona" />
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
 
@@ -82,45 +81,12 @@ import FooterView from '@/components/component/FooterView.vue'
 </script>
 
 <style scoped>
-.hero-buttons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* Tablet */
-@media (max-width: 991px) {
-    .hero-buttons {
-        justify-content: center;
-    }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .hero-buttons .fancy,
-    .hero-buttons .continue-application {
-        width: 100%;
-        max-width: 320px;
-    }
-}
-@media (max-width: 768px) {
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-}
+/* BASE STYLES & DESKTOP (≥ 1200px) */
 .hero-section {
     background: #06121f;
     color: white;
     overflow: hidden;
+    padding: 40px 0;
 }
 
 .hero-content {
@@ -128,26 +94,53 @@ import FooterView from '@/components/component/FooterView.vue'
 }
 
 .hero-title {
-    font-size: 40px;
+    font-size: 52px;
     font-weight: 700;
     line-height: 1.2;
 }
 
-.hero-subtitle {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #00bfff;
-    font-weight: 500;
-}
-
 .hero-description {
     color: #c9c9c9;
-    line-height: 1.9;
+    line-height: 1.8;
     font-size: 16px;
     max-width: 550px;
+    margin-bottom: 30px;
 }
 
-/* IMAGE */
+.subtitle-wrapper {
+    margin-top: 15px;
+}
+
+.h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #00d4ff;
+    border-right: 2px solid #00d4ff;
+    font-weight: 500;
+    animation:
+        typing 4s steps(24) infinite alternate,
+        blink .7s infinite;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.edit-color {
+    color: #00bfff !important;
+}
+
+/* IMAGE SETUP */
 .image-wrapper {
     display: flex;
     justify-content: center;
@@ -168,83 +161,100 @@ import FooterView from '@/components/component/FooterView.vue'
     box-shadow: 0 10px 40px rgba(0, 191, 255, 0.15);
 }
 
-/* ========================= */
-/* TABLET */
-/* ========================= */
-@media (max-width: 991px) {
-    .hero-title {
-        font-size: 3.2rem;
-    }
+/* ======================================================= */
+/* RESPONSIVE MEDIA BREAKPOINTS                            */
+/* ======================================================= */
 
+/* Laptop / Small Desktop (992px - 1199px) */
+@media (max-width: 1199px) {
+    .hero-title {
+        font-size: 42px;
+    }
     .pic {
-        max-width: 340px;
-        height: 430px;
+        max-width: 380px;
+        height: 470px;
     }
 }
 
-/* ========================= */
-/* MOBILE */
-/* ========================= */
-@media (max-width: 767px) {
-
-    .hero-section {
-        padding-top: 50px;
-        padding-bottom: 50px;
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 34px;
     }
+    .pic {
+        max-width: 320px;
+        height: 400px;
+    }
+    .hero-buttons {
+        gap: 15px;
+    }
+}
 
+/* Landscape Mobiles (576px - 767px) */
+@media (max-width: 767px) {
+    .hero-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
     .hero-content {
         text-align: center;
         padding-right: 0;
+        margin-top: 20px;
     }
-
-    .hero-title {
-        font-size: 2.5rem;
-        margin-top: 30px;
+    .subtitle-wrapper {
+        justify-content: center;
     }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
     .hero-description {
-        font-size: 15px;
         max-width: 100%;
+        font-size: 15px;
     }
-
     .hero-buttons {
         justify-content: center;
     }
-
     .pic {
-        max-width: 280px;
-        height: 340px;
+        max-width: 290px;
+        height: 360px;
     }
-
-
 }
 
-/* ========================= */
-/* SMALL MOBILE */
-/* ========================= */
-@media (max-width: 480px) {
-
+/* Small Portrait Mobiles (< 576px) */
+@media (max-width: 576px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 28px;
     }
-
-    .hero-subtitle {
-        font-size: 1rem;
+    .h4 {
+        font-size: 1.1rem;
+        flex-direction: column;
+        gap: 2px;
     }
-
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .fancy, .continue-application {
+        width: 100%;
+        max-width: 280px;
+    }
     .pic {
         max-width: 240px;
         height: 300px;
     }
 }
 
-/* ----Button---- */
+/* ======================================================= */
+/* ANIMATIONS & BUTTON STYLES                              */
+/* ======================================================= */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 24ch; }
+}
 
-/* From Uiverse.io by cssbuttons-io */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Fancy Button Style */
 .fancy {
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.278);
@@ -258,7 +268,7 @@ import FooterView from '@/components/component/FooterView.vue'
     margin: 0;
     outline: none;
     overflow: visible;
-    padding: 1.25em 2em;
+    padding: 1.1em 2em;
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -348,7 +358,8 @@ import FooterView from '@/components/component/FooterView.vue'
     right: 0;
     width: 0;
 }
-/* From Uiverse.io by Nawsome */ 
+
+/* Continue Application Button Style */
 .continue-application {
   --color: #fff;
   --background: #404660;
@@ -543,41 +554,5 @@ import FooterView from '@/components/component/FooterView.vue'
   --pby: -3px;
   --pbd: .15s;
   --pex: -24px;
-}
-/* animation title */
-.hero-subtitle {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    color: #00d4ff;
-    border-right: 2px solid #00d4ff;
-
-    animation:
-        typing 3s steps(20) infinite alternate,
-        blink .7s infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 20ch;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-.h4{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-.edit-color{
-    color: #00bfff !important;
 }
 </style>
