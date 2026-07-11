@@ -133,6 +133,17 @@
         width: var(--progress-width);
     }
 }
+
+/* certificate */
+.card {
+    height: 300px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
 </style>
 <template>
     <main>
@@ -160,36 +171,65 @@
                             <h1 class="section-title">Education</h1>
 
                             <div class="timeline">
-
                                 <div class="timeline-item">
                                     <div class="circle"></div>
 
-                                    <h3>Master of Computer Science</h3>
+                                    <h3>RUPP</h3>
 
-                                    <span class="year">2019 - 2021</span>
+                                    <span class="year">2024 - 2028</span>
 
-                                    <h5>Stanford University, California</h5>
+                                    <h5>Royal University of Phnom Penh</h5>
 
-                                    <p>
-                                        Studied advanced software engineering, artificial intelligence,
-                                        and modern web technologies.
-                                    </p>
+                                    <ul>
+                                        <li>---------</li>
+                                    </ul>
                                 </div>
 
                                 <div class="timeline-item">
                                     <div class="circle"></div>
 
-                                    <h3>Bachelor of Computer Science</h3>
+                                    <h3>ANT Technology</h3>
 
-                                    <span class="year">2015 - 2019</span>
+                                    <span class="year">2025 - 2026</span>
 
-                                    <h5>Massachusetts Institute of Technology</h5>
+                                    <h5>Abstract of New Technology</h5>
 
-                                    <p>
-                                        Focused on frontend development, backend systems, and UI/UX design.
-                                    </p>
+                                    <ul>
+                                        <li>Certificate of Completion : Java Script / Vue.js</li>
+                                        <li>Transcript : HTML + HTML5 + CSS</li>
+                                        <li>I was study Figmar : UX/UI</li>
+                                    </ul>
                                 </div>
 
+                                <div class="timeline-item">
+                                    <div class="circle"></div>
+
+                                    <h3>ETEC Center</h3>
+
+                                    <span class="year">2024 - 2025</span>
+
+                                    <h5>Engineer of Technology and Electronic Center</h5>
+
+                                    <p>I was study Basic of Infomation Technology. </p>
+                                    <ul>
+                                        <li>Certificate of Completion : Word, Excel, Power Point</li>
+                                        <li>Certificate of Completion : Basic Computer / Network</li>
+                                        <li>Certificate of Completion : Basic / C++ / Algorithm</li>
+                                    </ul>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="circle"></div>
+
+                                    <h3>Hight School</h3>
+
+                                    <span class="year">2022 - 2024</span>
+
+                                    <h5>Samdech Techo Hun Sen Suong High School</h5>
+                                    <ul>
+                                        <li>Bachelor's Degree : D ( Social Science Class )</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
@@ -222,51 +262,57 @@
                         <h1 class="section-title">Professional Experience</h1>
 
                         <div class="timeline">
-
-                            <div class="timeline-item">
-                                <div class="circle"></div>
-
-                                <h3>Senior Software Engineer</h3>
-
-                                <span class="year">2021 - Present</span>
-
-                                <h5>Google, Mountain View, CA</h5>
-
-                                <ul>
-                                    <li>Developed scalable web applications using Vue and Laravel.</li>
-                                    <li>Led a team of developers for enterprise projects.</li>
-                                    <li>Improved application performance and UI experience.</li>
-                                </ul>
+                            <div class="d-flex align-items-center">
+                                <hr class="flex-grow-1">
+                                <span class="mx-3">front-end</span>
+                                <hr class="flex-grow-1">
                             </div>
-
                             <div class="timeline-item">
                                 <div class="circle"></div>
 
-                                <h3>Software Engineer</h3>
+                                <h3>Vue.js</h3>
 
-                                <span class="year">2019 - 2021</span>
+                                <span class="year">6 / 24 / 2026 - </span>
 
-                                <h5>Microsoft, Redmond, WA</h5>
-
-                                <ul>
-                                    <li>Created modern responsive interfaces for clients.</li>
-                                    <li>Managed multiple software projects simultaneously.</li>
-                                    <li>Collaborated with UI/UX teams for better design systems.</li>
-                                </ul>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="circle"></div>
-
-                                <h3>Junior Developer</h3>
-
-                                <span class="year">2017 - 2019</span>
-
-                                <h5>Startup Company</h5>
+                                <h5>personal expense tracke (Team Group-1)</h5>
 
                                 <ul>
                                     <li>Built reusable frontend components.</li>
-                                    <li>Integrated REST APIs into Vue applications.</li>
+                                    <li>Integrated REST APIs into vue applications.</li>
+                                    <li>Fixed bugs and optimized website performance.</li>
+                                    <li>User page I was make (Transaction-form / Report-form).</li>
+                                    <li>Admin page I was make (User).</li>
+                                    <li>I also participated in doing the UI for this website.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="circle"></div>
+
+                                <h3>Java Script</h3>
+
+                                <span class="year">3 / 2 / 2026</span>
+
+                                <h5>Mini-Project (Team Group-4)</h5>
+
+                                <ul>
+                                    <li>Built reusable frontend components.</li>
+                                    <li>Integrated REST APIs into Js applications.</li>
+                                    <li>Fixed bugs and optimized website performance.</li>
+                                </ul>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="circle"></div>
+
+                                <h3>HTML + HTML5 + CSS</h3>
+
+                                <span class="year">7 / 2 / 2025</span>
+
+                                <h5>NK.Computer-shope</h5>
+
+                                <ul>
+                                    <li>Built reusable frontend components.</li>
                                     <li>Fixed bugs and optimized website performance.</li>
                                 </ul>
                             </div>
@@ -275,6 +321,35 @@
 
                     </div>
 
+                </div>
+            </section>
+            <div data-aos="zoom-out">
+                <h1 class="text-center mb-4 mt-5 text-light">My Certifycate</h1>
+                <p class="text-center">
+                    I have done verious programming courses increase my programming skills and I'm sharing few to them
+                </p>
+            </div>
+            <!-- Certifycate -->
+            <section>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card border-0 bg-transparent">
+                            <img src="https://media.gettyimages.com/id/1813512682/vector/certificate-diploma-template.jpg?s=612x612&w=gi&k=20&c=sqk_pABwv9CYB4UwaAu3fQdRoILYurBzGok05Fj1JRk="
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card border-0 bg-transparent">
+                            <img src="https://i.ytimg.com/vi/EoOaHe62If8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBIi7SoTJdpr21bgic9xmW4Eo3_iA"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card border-0 bg-transparent">
+                            <img src="https://cdn-useast1.kapwing.com/static/templates/classic-blue-and-gold-award-certificate-template-ivAS3Aaco5IVb3Da-full.jpg"
+                                alt="">
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
