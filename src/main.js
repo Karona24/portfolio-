@@ -15,6 +15,8 @@ import 'aos/dist/aos.css'
 
 const app = createApp(App)
 
+// បិទ Vue Devtools ក្នុង Production
+app.config.performance = false;
 app.use(router)
 
 // Initialize AOS

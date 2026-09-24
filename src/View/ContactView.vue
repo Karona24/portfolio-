@@ -2,12 +2,14 @@
   <main>
     <NavBar />
     <div class="container">
-      <div data-aos="zoom-out">
+      <div>
         <h1 class="text-center mb-4 mt-5 text-light">Contact</h1>
-        <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit.
+        <p class="text-center">
+          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit.
           Sed ut perspiciatis
         </p>
-        <p class="text-center">unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam
+        <p class="text-center">
+          unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam
           rem aperiam
         </p>
       </div>
@@ -17,7 +19,7 @@
 
             <!-- LEFT SIDE -->
             <div class="col-lg-5">
-              <div class="contact-card" data-aos="zoom-out">
+              <div class="contact-card">
 
                 <h1 class="title">Contact Info</h1>
 
@@ -60,18 +62,17 @@
 
                   <div>
                     <h3>Email Address</h3>
-                    <p>noeunkarona354@gmail.com</p>
+                    <p class="pEmail">noeunkarona354@gmail.com</p>
                     <p>Not Null</p>
                   </div>
                 </div>
-
 
               </div>
             </div>
 
             <!-- RIGHT SIDE -->
             <div class="col-lg-7">
-              <div class="contact-card" data-aos="zoom-out">
+              <div class="contact-card">
 
                 <h1 class="title">Get In Touch</h1>
 
@@ -80,28 +81,52 @@
                   egestas non nisi. Vestibulum ante ipsum primis.
                 </p>
 
-                <form>
+                <form @submit.prevent="sendToTelegram">
                   <div class="row g-4">
 
                     <div class="col-md-6">
-                      <input type="text" class="form-control custom-input" placeholder="Your Name" />
+                      <input 
+                        v-model="form.name" 
+                        type="text" 
+                        class="form-control custom-input" 
+                        placeholder="Your Name" 
+                        required 
+                      />
                     </div>
 
                     <div class="col-md-6">
-                      <input type="email" class="form-control custom-input" placeholder="Your Email" />
+                      <input 
+                        v-model="form.email" 
+                        type="email" 
+                        class="form-control custom-input" 
+                        placeholder="Your Email" 
+                        required 
+                      />
                     </div>
 
                     <div class="col-12">
-                      <input type="text" class="form-control custom-input" placeholder="Subject" />
+                      <input 
+                        v-model="form.subject" 
+                        type="text" 
+                        class="form-control custom-input" 
+                        placeholder="Subject" 
+                        required 
+                      />
                     </div>
 
                     <div class="col-12">
-                      <textarea rows="8" class="form-control custom-input" placeholder="Message"></textarea>
+                      <textarea 
+                        v-model="form.message" 
+                        rows="8" 
+                        class="form-control custom-input" 
+                        placeholder="Message" 
+                        required
+                      ></textarea>
                     </div>
 
                     <div class="col-12 text-center">
-                      <button class="send-btn">
-                        Send Message
+                      <button type="submit" class="send-btn" :disabled="loading">
+                        {{ loading ? 'Sending...' : 'Send Message' }}
                       </button>
                     </div>
 
@@ -118,24 +143,66 @@
   </main>
   <FooterView />
 </template>
+
 <script setup>
+import { ref } from 'vue';
+import axios from 'axios';
 import FooterView from '@/components/component/FooterView.vue';
 import NavBar from '@/components/component/NavBar.vue';
+
+// 1. Reactive Variable សម្រាប់ Form
+const form = ref({
+  name: '',
+  email: '',
+  subject: '',
+  message: ''
+});
+
+const loading = ref(false);
+
+// 2. Function សម្រាប់ផ្ញើសារទៅកាន់ Express Backend
+const sendToTelegram = async () => {
+  loading.value = true;
+
+  try {
+    const response = await axios.post('http://localhost:5000/api/send-message', {
+      name: form.value.name,
+      email: form.value.email,
+      subject: form.value.subject,
+      message: form.value.message
+    });
+
+    if (response.data.success) {
+      alert('សាររបស់អ្នកត្រូវបានផ្ញើទៅកាន់ Telegram រួចរាល់!');
+      form.value = { name: '', email: '', subject: '', message: '' };
+    }
+  } catch (error) {
+    console.error('Error sending message:', error);
+    alert('មានបញ្ហាក្នុងការផ្ញើសារ! សូមពិនិត្យមើលថាតើ Express Server (Node.js) កំពុងរត់ហើយឬនៅ។');
+  } finally {
+    loading.value = false;
+  }
+};
 </script>
+
 <style scoped>
 .contact-section {
   background: #07131d;
   min-height: 90vh;
   padding: 40px 20px;
   font-family: sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-card {
   background: #0b1823;
   border-radius: 24px;
   padding: 50px;
-  height: 100%;
+  min-height: 100%;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
 }
 
 .title {
@@ -179,7 +246,7 @@ import NavBar from '@/components/component/NavBar.vue';
   margin-bottom: 6px;
 }
 
-/* FORM */
+/* FORM - កែប្រែដើម្បីឱ្យទាញស្រទាប់ចុចមកលើគេបំផុត */
 .custom-input {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -188,6 +255,9 @@ import NavBar from '@/components/component/NavBar.vue';
   border-radius: 14px;
   padding: 20px;
   font-size: 20px;
+  position: relative !important;
+  z-index: 999 !important;
+  pointer-events: auto !important;
 }
 
 .custom-input:focus {
@@ -213,10 +283,26 @@ textarea.custom-input {
   font-size: 26px;
   margin-top: 20px;
   transition: 0.3s;
+  cursor: pointer;
+  position: relative !important;
+  z-index: 999 !important;
+  pointer-events: auto !important;
 }
 
 .send-btn:hover {
   color: #1f8fff;
+}
+
+.send-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Fix អក្សរ Email ហូរលើ Screen តូច */
+.pEmail {
+  font-size: 18px !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 /* RESPONSIVE */
@@ -245,6 +331,12 @@ textarea.custom-input {
   .custom-input {
     height: 60px;
     font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pEmail {
+    font-size: 14px !important;
   }
 }
 </style>
