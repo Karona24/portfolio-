@@ -583,9 +583,10 @@ img {
                 <h1 class="mb-4 mt-5 text-light">About</h1>
 
                 <p class="about-desc">
-                    Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-                    consectetur velit. Sed ut perspiciatis unde omnis iste natus error
-                    sit voluptatem accusantium doloremque laudantium totam rem aperiam.
+                    I am a passionate Full-Stack Web Developer with a strong foundation in Vue.js and Express. I enjoy
+                    creating clean, responsive, and user-friendly web applications that solve real-world problems.
+                    Constantly learning and adapting to new technologies, I am driven to deliver efficient and scalable
+                    solutions.
                 </p>
             </div>
 
@@ -602,22 +603,19 @@ img {
                         </p>
 
                         <h1 class="fw-light text-light about-title">
-                            Hi, I'm Karona - a calm-minded creative developer crafting
-                            serene digital journeys
+                            Hi, I'm Karona. A calm-minded creative developer crafting serene digital experiences.
                         </h1>
 
                         <h5 class="fw-light mt-3 about-subtitle">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Pellentesque habitant morbi tristique senectus et netus.
-                            Sed interdum, nunc non feugiat tempor, orci lorem luctus
-                            ligula, vitae rutrum nisl lorem non nulla.
+                            I am a developer who focuses on building clean, efficient, and user-centric web
+                            applications. Specializing in modern technologies like Vue.js and Express, I combine
+                            thoughtful design with solid code structure to deliver smooth digital experiences.
                         </h5>
 
                         <p class="mt-3 about-text">
-                            Integer posuere lacus in mi fringilla, eget luctus risus
-                            pulvinar. Curabitur a arcu a nisl tempus sagittis.
-                            Aenean varius, tortor sed porttitor dictum, augue eros
-                            viverra lectus, at efficitur magna lacus in risus.
+                            Beyond coding, I enjoy problem-solving and exploring new technologies to refine my craft.
+                            Whether it's crafting intuitive user interfaces or building reliable backend services, I
+                            strive to make every project meaningful and well-structured.
                         </p>
 
                     </div>
@@ -632,7 +630,7 @@ img {
                             <span class="bottom-key-2"></span>
                         </a>
 
-                        <button class="continue-application">
+                        <button class="continue-application" @click="$router.push({ name: 'contact' })">
                             <div>
                                 <div class="pencil"></div>
 
@@ -660,7 +658,7 @@ img {
                 <div class="col-lg-5 col-md-12 col-12 text-center order-1 order-lg-2">
                     <div class="card bg-transparent" data-aos="fade-left">
                         <div class="pic mx-auto">
-                            <img src="../image/photo_2026-05-10_15-08-40.jpg" alt="Profile">
+                            <img src="../image/photo_2026-09-24_20-43-41.jpg" alt="Profile">
                         </div>
                     </div>
 
@@ -739,16 +737,6 @@ import NavBar from '@/components/component/NavBar.vue';
 import FooterView from '@/components/component/FooterView.vue';
 const skills = [
     {
-        title: "HTML",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 90,
-    },
-    {
-        title: "CSS",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 85,
-    },
-    {
         title: "JavaScript",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
         percent: 70,
@@ -758,6 +746,16 @@ const skills = [
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
         percent: 75,
     },
+    {
+        title: "HTML",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 90,
+    },
+    {
+        title: "CSS",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 85,
+    }, 
     {
         title: "Bootstrap",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",

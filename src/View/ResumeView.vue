@@ -151,13 +151,8 @@ img {
         <div class="container">
             <div data-aos="zoom-out">
                 <h1 class="text-center mb-4 mt-5 text-light">Resume</h1>
-                <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur
-                    velit.
-                    Sed ut perspiciatis
-                </p>
-                <p class="text-center">unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
-                    totam
-                    rem aperiam
+                <p class="text-center">
+                   Highlighting my journey as a developer, key academic achievements, and practical expertise built through real-world projects.
                 </p>
             </div>
             <section class="resume-section container-fluid py-5">
@@ -323,14 +318,14 @@ img {
 
                 </div>
             </section>
-            <div data-aos="zoom-out">
+            <!-- <div data-aos="zoom-out">
                 <h1 class="text-center mb-4 mt-5 text-light">My Certifycate</h1>
                 <p class="text-center">
                     I have done verious programming courses increase my programming skills and I'm sharing few to them
                 </p>
-            </div>
+            </div> -->
             <!-- Certifycate -->
-            <section>
+            <!-- <section>
                 <div class="row">
                     <div class="col-4">
                         <div class="card border-0 bg-transparent">
@@ -351,7 +346,7 @@ img {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </div>
     </main>
     <FooterView />

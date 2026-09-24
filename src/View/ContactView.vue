@@ -5,12 +5,11 @@
       <div>
         <h1 class="text-center mb-4 mt-5 text-light">Contact</h1>
         <p class="text-center">
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit.
-          Sed ut perspiciatis
+          Let's Work Together!
+          Have a project in mind or looking for a passionate developer to join your team or company ? 
         </p>
         <p class="text-center">
-          unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam
-          rem aperiam
+          Send me a message below and I'll get back to you as soon as possible.
         </p>
       </div>
       <section class="contact-section">
@@ -24,8 +23,7 @@
                 <h1 class="title">Contact Info</h1>
 
                 <p class="desc">
-                  Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi. Vestibulum ante ipsum primis.
+                  Feel free to reach out to me directly through any of the details below. I'm always open to discussing new projects or ideas.
                 </p>
 
                 <!-- LOCATION -->
@@ -77,8 +75,7 @@
                 <h1 class="title">Get In Touch</h1>
 
                 <p class="desc">
-                  Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi. Vestibulum ante ipsum primis.
+                  Have a project in mind, a job opportunity, or just want to say hi? Fill out the form below and I'll respond as soon as possible!
                 </p>
 
                 <form @submit.prevent="sendToTelegram">

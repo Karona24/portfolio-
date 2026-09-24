@@ -6,12 +6,10 @@
 import { onMounted, onUnmounted } from 'vue';
 
 const preventInspect = (e) => {
-  // ១. បិទ Right-Click
   if (e.type === 'contextmenu') {
     e.preventDefault();
   }
 
-  // ២. បិទ Shortcut Keys សម្រាប់ DevTools
   if (e.type === 'keydown') {
     const isDevKey = 
       e.key === 'F12' ||
