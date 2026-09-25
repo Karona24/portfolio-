@@ -13,17 +13,18 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+
+AOS.init({
+  duration: 1000,
+  once: true,
+  offset: 100,
+  disable: 'mobile' 
+})
+
 const app = createApp(App)
 
-// បិទ Vue Devtools ក្នុង Production
+
 app.config.performance = false;
 app.use(router)
-
-// Initialize AOS
-AOS.init({
-  duration: 1000, 
-  once: true,    
-  offset: 100,   
-})
 
 app.mount('#app')

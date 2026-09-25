@@ -4,4 +4,22 @@ body{
 }
 * {
     color: #ffffff93 !important;
+}/* បង្ខំ Body និង Container មិនឲ្យលូនចេញក្រៅ Screen */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+#app {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* លុប Margin អវិជ្ជមានរបស់ Bootstrap Row ដែលតែងតែបង្កបញ្ហាលើ Mobile */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }

@@ -1,4 +1,334 @@
+<template>
+    <NavBar />
+    <div class="container-lg mt-5 mb-5 px-3">
+        <!-- ABOUT SECTION -->
+        <!-- TITLE -->
+        <div class="mb-5 text-center" data-aos="zoom-out">
+            <h1 class="mb-4 mt-5 text-light">About</h1>
+
+            <p class="about-desc">
+                I am a passionate Full-Stack Web Developer with a strong foundation in Vue.js and Express. I enjoy
+                creating clean, responsive, and user-friendly web applications that solve real-world problems.
+                Constantly learning and adapting to new technologies, I am driven to deliver efficient and scalable
+                solutions.
+            </p>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="row align-items-center g-4 mb-5">
+
+            <!-- TEXT -->
+            <div class="col-lg-7 col-md-12 col-12 order-2 order-lg-1" data-aos="fade-right">
+
+                <div class="card border-0 bg-transparent">
+
+                    <p class="text-info fw-semibold">
+                        Hello there
+                    </p>
+
+                    <h1 class="fw-light text-light about-title">
+                        Hi, I'm Karona. A calm-minded creative developer crafting serene digital experiences.
+                    </h1>
+
+                    <h5 class="fw-light mt-3 about-subtitle">
+                        I am a developer who focuses on building clean, efficient, and user-centric web
+                        applications. Specializing in modern technologies like Vue.js and Express, I combine
+                        thoughtful design with solid code structure to deliver smooth digital experiences.
+                    </h5>
+
+                    <p class="mt-3 about-text">
+                        Beyond coding, I enjoy problem-solving and exploring new technologies to refine my craft.
+                        Whether it's crafting intuitive user interfaces or building reliable backend services, I
+                        strive to make every project meaningful and well-structured.
+                    </p>
+
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="mt-4 button-group">
+
+                    <a class="fancy" href="#">
+                        <span class="top-key"></span>
+                        <span class="text">View My Work</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </a>
+
+                    <button class="continue-application" @click="$router.push({ name: 'contact' })">
+                        <div>
+                            <div class="pencil"></div>
+
+                            <div class="folder">
+                                <div class="top">
+                                    <svg viewBox="0 0 24 27">
+                                        <path
+                                            d="M1,0 L23,0 C23.5522847,0 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 0,26.5522847 0,26 L0,1 C0,0.44771525 0.44771525,0 1,0 Z">
+                                        </path>
+                                    </svg>
+                                </div>
+
+                                <div class="paper"></div>
+                            </div>
+                        </div>
+
+                        Get In Touch
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- IMAGE -->
+            <div class="col-lg-5 col-md-12 col-12 text-center order-1 order-lg-2">
+                <div class="card bg-transparent border-0" data-aos="fade-left">
+                    <div class="pic mx-auto">
+                        <img src="../image/photo_2026-09-24_20-43-41.jpg" alt="Profile">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h1 class="text-center text-light mt-5">Software Skills</h1>
+        <hr class="mt-4 mb-4">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 col-12" v-for="(skill, index) in skills" :key="index">
+                <div class="skill-card h-100" data-aos="zoom-in">
+                    <div class="icon-box mb-4">
+                        <i :class="skill.icon"></i>
+                    </div>
+                    <h2>{{ skill.title }}</h2>
+                    <p>{{ skill.description }}</p>
+                    <div class="percent">
+                        {{ skill.percent }}%
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" :style="{ width: skill.percent + '%' }"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec mt-5 mb-5">
+            <h1 class="text-center text-light">Preference</h1>
+            <hr class="mt-4 mb-4">
+            <div class="row mt-4 g-4" data-aos="flip-down">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card border-0 bg-transparent text-center p-4 h-100">
+                        <i class="bi bi-book-half icon"></i>
+                        <h5 class="mt-3 text-light">Reading</h5>
+                        <p class="text-secondary">
+                            I enjoy reading books and learning new knowledge every day.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card border-0 bg-transparent text-center p-4 h-100">
+                        <i class="bi bi-film icon"></i>
+                        <h5 class="mt-3 text-light">Movies</h5>
+                        <p class="text-secondary">
+                            Watching movies helps me relax and explore different stories.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card border-0 bg-transparent text-center p-4 h-100">
+                        <i class="bi bi-music-note-beamed icon"></i>
+                        <h5 class="mt-3 text-light">Music</h5>
+                        <p class="text-secondary">
+                            Music keeps me motivated and improves my mood while working.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="card border-0 bg-transparent text-center p-4 h-100">
+                        <i class="bi bi-dribbble icon"></i>
+                        <h5 class="mt-3 text-light">Sports</h5>
+                        <p class="text-secondary">
+                            I love playing sports and staying active for a healthy lifestyle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <FooterView />
+</template>
+
+<script setup>
+import NavBar from '@/components/component/NavBar.vue';
+import FooterView from '@/components/component/FooterView.vue';
+
+const skills = [
+    {
+        title: "Vue JS",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 60,
+    },
+    {
+        title: "JavaScript",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 50,
+    },
+    {
+        title: "Express JS",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 65,
+    },
+    {
+        title: "MySQL",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 55,
+    },
+    {
+        title: "GitHub",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 50,
+    },
+    {
+        title: "Postman",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 65,
+    },
+    {
+        title: "Linux Security",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 40,
+    },
+    {
+        title: "HTML",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 70,
+    },
+    {
+        title: "CSS",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 65,
+    }, 
+    {
+        title: "Bootstrap",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 50,
+    },
+    {
+        title: "Figma",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 50,
+    },
+]
+</script>
+
 <style scoped>
+/* GLOBAL / CONTAINER FIXES */
+.about-desc {
+    max-width: 700px;
+    margin: auto;
+    color: #9ca3af;
+    line-height: 1.8;
+}
+
+.about-title {
+    line-height: 1.4;
+    font-size: 3rem;
+}
+
+.about-subtitle {
+    line-height: 1.8;
+    color: #d1d5db;
+}
+
+.about-text {
+    color: #9ca3af;
+    line-height: 1.8;
+}
+
+.bg-edit {
+    background-color: rgba(4, 10, 50, 0.29);
+}
+
+.card-edit {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-edit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fix global img styling to specific wrapper */
+.pic {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 191, 255, 0.15);
+}
+
+/* SKILL CARD & PROGRESS */
+.skill-card {
+    padding: 20px;
+    background: #071926;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.skill-card p {
+    color: #8b949e;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.percent {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #0d2a3d;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #12a8f5;
+    border-radius: 20px;
+}
+
+/* BUTTONS STYLING */
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* FANCY BUTTON */
 .fancy {
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.278);
@@ -79,7 +409,7 @@
 
 .fancy:hover {
     color: white;
-    background: #0000003b;
+    background: rgba(0, 0, 0, 0.23);
 }
 
 .fancy:hover::before {
@@ -103,7 +433,7 @@
     width: 0;
 }
 
-/* From Uiverse.io by Nawsome */
+/* CONTINUE APPLICATION BUTTON */
 .continue-application {
     --color: #fff;
     --background: #404660;
@@ -304,201 +634,8 @@
     --pex: -24px;
 }
 
-
-.pic {
-    max-width: 450px;
-    height: 480px;
-    margin-left: 100px;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.bg-edit {
-    background-color: #040a324a;
-}
-
-.card-edit {
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.card-edit:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px #00000033;
-}
-
-.skill-card {
-    padding: 20px;
-    background: #071926;
-    border: 1px solid #ffffff0d;
-    border-radius: 6px;
-    color: white;
-    transition: 0.3s;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px #0000004d;
-}
-
-.skill-card h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.skill-card p {
-    color: #8b949e;
-    line-height: 1.7;
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.percent {
-    text-align: right;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.progress {
-    width: 100%;
-    height: 10px;
-    background: #0d2a3d;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    height: 100%;
-    background: #12a8f5;
-    border-radius: 20px;
-}
-
-.about-title {
-    line-height: 1.4;
-}
-
-.pic {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-}
-
-.pic img {
-    width: 100%;
-    border-radius: 15px;
-    object-fit: cover;
-}
-
-.button-group {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-
-    .about-title {
-        font-size: 2rem;
-    }
-
-    .pic {
-        max-width: 320px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-    .about-title {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .card {
-        text-align: center;
-    }
-
-    .button-group {
-        justify-content: center;
-    }
-
-    .button-group .btn {
-        width: 100%;
-    }
-
-    .pic {
-        max-width: 250px;
-    }
-}
-
-/* ===========================
-   ABOUT
-=========================== */
-
-.about-desc {
-    max-width: 700px;
-    margin: auto;
-    color: #9ca3af;
-    line-height: 1.8;
-}
-
-.about-title {
-    line-height: 1.4;
-    font-size: 3rem;
-}
-
-.about-subtitle {
-    line-height: 1.8;
-    color: #d1d5db;
-}
-
-.about-text {
-    color: #9ca3af;
-    line-height: 1.8;
-}
-
-/* ===========================
-   IMAGE
-=========================== */
-
-.pic {
-    width: 100%;
-    max-width: 420px;
-}
-
-.pic img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 191, 255, 0.15);
-}
-
-/* ===========================
-   BUTTONS
-=========================== */
-
-.button-group {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* ===========================
-   TABLET
-=========================== */
-
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 991px) {
-
     .about-title {
         font-size: 2.2rem;
         text-align: center;
@@ -506,7 +643,7 @@ img {
 
     .about-subtitle,
     .about-text,
-    .card p {
+    .about-desc {
         text-align: center;
     }
 
@@ -519,12 +656,7 @@ img {
     }
 }
 
-/* ===========================
-   MOBILE
-=========================== */
-
 @media (max-width: 768px) {
-
     .about-title {
         font-size: 1.8rem;
     }
@@ -539,13 +671,14 @@ img {
 
     .button-group {
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 
     .button-group .fancy,
     .button-group .continue-application {
         width: 100%;
-        max-width: 320px;
+        max-width: 300px;
     }
 
     .pic {
@@ -553,12 +686,7 @@ img {
     }
 }
 
-/* ===========================
-   SMALL MOBILE
-=========================== */
-
 @media (max-width: 576px) {
-
     .about-title {
         font-size: 1.5rem;
     }
@@ -572,224 +700,3 @@ img {
     }
 }
 </style>
-<template>
-    <NavBar />
-    <div class="container-lg mt-6 mb-5">
-        <!-- ABOUT SECTION -->
-        <div class="container-lg py-5">
-
-            <!-- TITLE -->
-            <div class="mb-5 text-center" data-aos="zoom-out">
-                <h1 class="mb-4 mt-5 text-light">About</h1>
-
-                <p class="about-desc">
-                    I am a passionate Full-Stack Web Developer with a strong foundation in Vue.js and Express. I enjoy
-                    creating clean, responsive, and user-friendly web applications that solve real-world problems.
-                    Constantly learning and adapting to new technologies, I am driven to deliver efficient and scalable
-                    solutions.
-                </p>
-            </div>
-
-            <!-- CONTENT -->
-            <div class="row align-items-center g-5 mb-5">
-
-                <!-- TEXT -->
-                <div class="col-lg-7 col-md-12 col-12 order-2 order-lg-1" data-aos="fade-right">
-
-                    <div class="card border-0 bg-transparent">
-
-                        <p class="text-info fw-semibold">
-                            Hello there
-                        </p>
-
-                        <h1 class="fw-light text-light about-title">
-                            Hi, I'm Karona. A calm-minded creative developer crafting serene digital experiences.
-                        </h1>
-
-                        <h5 class="fw-light mt-3 about-subtitle">
-                            I am a developer who focuses on building clean, efficient, and user-centric web
-                            applications. Specializing in modern technologies like Vue.js and Express, I combine
-                            thoughtful design with solid code structure to deliver smooth digital experiences.
-                        </h5>
-
-                        <p class="mt-3 about-text">
-                            Beyond coding, I enjoy problem-solving and exploring new technologies to refine my craft.
-                            Whether it's crafting intuitive user interfaces or building reliable backend services, I
-                            strive to make every project meaningful and well-structured.
-                        </p>
-
-                    </div>
-
-                    <!-- BUTTONS -->
-                    <div class="mt-4 button-group">
-
-                        <a class="fancy" href="#">
-                            <span class="top-key"></span>
-                            <span class="text">View My Work</span>
-                            <span class="bottom-key-1"></span>
-                            <span class="bottom-key-2"></span>
-                        </a>
-
-                        <button class="continue-application" @click="$router.push({ name: 'contact' })">
-                            <div>
-                                <div class="pencil"></div>
-
-                                <div class="folder">
-                                    <div class="top">
-                                        <svg viewBox="0 0 24 27">
-                                            <path
-                                                d="M1,0 L23,0 C23.5522847,0 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 0,26.5522847 0,26 L0,1 C0,0.44771525 0.44771525,0 1,0 Z">
-                                            </path>
-                                        </svg>
-                                    </div>
-
-                                    <div class="paper"></div>
-                                </div>
-                            </div>
-
-                            Get In Touch
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <!-- IMAGE -->
-                <div class="col-lg-5 col-md-12 col-12 text-center order-1 order-lg-2">
-                    <div class="card bg-transparent" data-aos="fade-left">
-                        <div class="pic mx-auto">
-                            <img src="../image/photo_2026-09-24_20-43-41.jpg" alt="Profile">
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-        <h1 class="text-center text-light">Software Skills</h1>
-        <hr class="mt-5 mb-4">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-12 mt-4" v-for="(skill, index) in skills" :key="index">
-                <div class="skill-card h-100" data-aos="zoom-in">
-                    <div class="icon-box mb-4">
-                        <i :class="skill.icon"></i>
-                    </div>
-                    <h2>{{ skill.title }}</h2>
-                    <p>{{ skill.description }}</p>
-                    <div class="percent">
-                        {{ skill.percent }}%
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" :style="{ width: skill.percent + '%' }"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sec mt-5 mb-5">
-            <h1 class="text-center text-light">Preference</h1>
-            <hr class="mt-5 mb-4">
-            <div class="row mt-5 g-4" data-aos="flip-down">
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card border-0 bg-transparent text-center p-4 h-100">
-                        <i class="bi bi-book-half icon"></i>
-                        <h5 class="mt-3 text-light">Reading</h5>
-                        <p class="text-secondary">
-                            I enjoy reading books and learning new knowledge every day.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card border-0 bg-transparent text-center p-4 h-100">
-                        <i class="bi bi-film icon"></i>
-                        <h5 class="mt-3 text-light">Movies</h5>
-                        <p class="text-secondary">
-                            Watching movies helps me relax and explore different stories.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card border-0 bg-transparent text-center p-4 h-100">
-                        <i class="bi bi-music-note-beamed icon"></i>
-                        <h5 class="mt-3 text-light">Music</h5>
-                        <p class="text-secondary">
-                            Music keeps me motivated and improves my mood while working.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card border-0 bg-transparent text-center p-4 h-100">
-                        <i class="bi bi-dribbble icon"></i>
-                        <h5 class="mt-3 text-light">Sports</h5>
-                        <p class="text-secondary">
-                            I love playing sports and staying active for a healthy lifestyle.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <FooterView />
-</template>
-<script setup>
-import NavBar from '@/components/component/NavBar.vue';
-import FooterView from '@/components/component/FooterView.vue';
-const skills = [
-    {
-        title: "Vue JS",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 60,
-    },
-    {
-        title: "JavaScript",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 50,
-    },
-    {
-        title: "Express JS",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 65,
-    },
-    {
-        title: "MySQL",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 55,
-    },
-    {
-        title: "GitHup",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 50,
-    },
-    {
-        title: "Postman",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 65,
-    },
-    {
-        title: "Linux Security",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 40,
-    },
-    {
-        title: "HTML",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 70,
-    },
-    {
-        title: "CSS",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 65,
-    }, 
-    {
-        title: "Bootstrap",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 50,
-    },
-    {
-        title: "Figma",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 50,
-    },
-]
-</script>

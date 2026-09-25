@@ -24,15 +24,16 @@
     border-radius: 20px;
 }
 
-/* TIMELINE */
+/* TIMELINE STYLING */
 .timeline {
-    border-left: 1px solid rgba(0, 191, 255, 0.3);
-    padding-left: 30px;
+    border-left: 2px solid rgba(0, 191, 255, 0.4);
+    position: relative;
+    padding-left: 24px;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
 }
 
 .circle {
@@ -42,19 +43,20 @@
     border-radius: 50%;
     background: #06121f;
     position: absolute;
-    left: -39px;
-    top: 10px;
+    left: -33px; 
+    top: 6px;
+    z-index: 2;
 }
 
 .timeline-item h3 {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .timeline-item h5 {
     color: #cfcfcf;
-    margin: 20px 0;
+    margin: 15px 0;
     font-style: italic;
 }
 
@@ -69,43 +71,18 @@
     padding-left: 20px;
 }
 
-/* YEAR */
+/* YEAR BADGE */
 .year {
     background: rgba(0, 191, 255, 0.1);
     color: #00bfff;
-    padding: 10px 18px;
+    padding: 6px 14px;
     border-radius: 10px;
     display: inline-block;
     font-weight: 600;
+    font-size: 14px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .timeline-item h3 {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .timeline-item h3 {
-        font-size: 15px;
-    }
-
-    .timeline-item p,
-    .timeline-item li {
-        font-size: 15px;
-    }
-
-    .timeline {
-        padding-left: 20px;
-    }
-
-    .circle {
-        left: -29px;
-    }
-}
-
+/* PROGRESS BAR */
 .progress {
     height: 10px;
     background: #1c2b38;
@@ -128,21 +105,60 @@
     from {
         width: 0;
     }
-
     to {
         width: var(--progress-width);
     }
 }
 
-/* certificate */
-.card {
-    height: 300px;
+
+   /* RESPONSIVE (MOBILE & TABLET FIX) */
+
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .timeline {
+        padding-left: 20px;
+        margin-left: 12px; 
+    }
+
+    .circle {
+        width: 14px;
+        height: 14px;
+        left: -28px; 
+        top: 5px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+
+    .timeline-item h3 {
+        font-size: 18px;
+    }
+
+    .timeline-item h5 {
+        font-size: 14px;
+    }
+
+    .timeline-item p,
+    .timeline-item li {
+        font-size: 14px;
+    }
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+@media (max-width: 400px) {
+    .timeline {
+        margin-left: 8px;
+        padding-left: 18px;
+    }
+
+    .circle {
+        left: -26px;
+    }
 }
 </style>
 <template>

@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
-    <div class="container">
+    <div class="container px-3 px-sm-4">
 
       <!-- LOGO -->
-      <a class="navbar-brand text-white fw-bold" href="">
+      <a class="navbar-brand text-white fw-bold me-0" href="#">
         N.Karona
       </a>
 
@@ -83,7 +83,8 @@
 <style scoped>
 .navbar-custom {
   background: #06121f;
-  padding: 10px 0;
+  padding: 12px 0;
+  width: 100%;
 }
 
 /* NAV LINKS */
@@ -133,7 +134,7 @@
   transform: translateY(-2px);
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE FIX */
 @media (max-width: 991px) {
   .navbar-nav {
     text-align: center;
@@ -141,7 +142,7 @@
 
   .nav-hover {
     margin-right: 0;
-    padding: 12px 0;
+    padding: 10px 0;
   }
 
   .social-icons {
