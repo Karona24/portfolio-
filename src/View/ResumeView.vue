@@ -230,7 +230,7 @@ img {
 
                         <!-- SKILLS -->
                         <div>
-                            <h1 class="section-title">Professional Skills</h1>
+                            <h1 class="section-title" data-aos="zoom-out">Professional Skills</h1>
 
                             <div class="skill-box">
 
@@ -358,20 +358,20 @@ import { ref } from 'vue'
 
 const skills = ref([
     {
-        name: 'Frontend Development',
-        percent: 95
+        name: 'Backend Development',
+        percent: 65
     },
     {
-        name: 'Backend Development',
-        percent: 85
+        name: 'Frontend Development',
+        percent: 60
+    },
+    {
+        name: 'Security',
+        percent: 50
     },
     {
         name: 'UI/UX Design',
-        percent: 90
-    },
-    {
-        name: 'Project Management',
-        percent: 80
+        percent: 40
     }
 ])
 </script>

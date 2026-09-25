@@ -36,7 +36,7 @@
                                     <span class="bottom-key-1"></span>
                                     <span class="bottom-key-2"></span>
                                 </a>
-                                <router-link :to="{ name: 'contact' }" class="continue-application">
+                                <button class="continue-application" @click="$router.push({ name: 'contact' })">
                                     <div>
                                         <div class="pencil"></div>
 
@@ -52,8 +52,9 @@
                                             <div class="paper"></div>
                                         </div>
                                     </div>
+
                                     Get In Touch
-                                </router-link>
+                                </button>
                             </div>
                         </div>
                     </div>

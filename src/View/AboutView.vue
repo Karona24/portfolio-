@@ -737,29 +737,24 @@ import NavBar from '@/components/component/NavBar.vue';
 import FooterView from '@/components/component/FooterView.vue';
 const skills = [
     {
-        title: "JavaScript",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 70,
-    },
-    {
         title: "Vue JS",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 75,
+        percent: 60,
     },
     {
-        title: "HTML",
+        title: "JavaScript",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 90,
+        percent: 50,
     },
     {
-        title: "CSS",
+        title: "Express JS",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 85,
-    }, 
+        percent: 65,
+    },
     {
-        title: "Bootstrap",
+        title: "MySQL",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 95,
+        percent: 55,
     },
     {
         title: "GitHup",
@@ -772,9 +767,29 @@ const skills = [
         percent: 65,
     },
     {
+        title: "Linux Security",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 40,
+    },
+    {
+        title: "HTML",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 70,
+    },
+    {
+        title: "CSS",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 65,
+    }, 
+    {
+        title: "Bootstrap",
+        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+        percent: 50,
+    },
+    {
         title: "Figma",
         description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 60,
+        percent: 50,
     },
 ]
 </script>
