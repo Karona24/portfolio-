@@ -1,38 +1,19 @@
-body{
-    /* background-color: #14191a !important; */
+body {
     background-color: #06121F !important;
 }
+
 * {
     color: #ffffff93 !important;
 }
-@media (max-width: 991px) {
-  [data-aos] {
-    opacity: 1 !important;
-    transform: none !important;
-    visibility: visible !important;
-  }
+
+html, body, #app {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
 }
 
-html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden !important;
-}
-
-#app {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden !important;
-}
 @media (max-width: 991px) {
-  [data-aos] {
-    opacity: 1 !important;
-  }
-  
-  [data-aos="fade-left"],
-  [data-aos="fade-right"],
-  [data-aos="slide-left"],
-  [data-aos="slide-right"] {
-    transform: none !important;
-  }
+    [data-aos] {
+        transition-property: transform, opacity !important;
+    }
 }
