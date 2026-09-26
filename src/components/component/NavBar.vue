@@ -82,9 +82,12 @@
 
 <style scoped>
 .navbar-custom {
-  background: #06121f;
-  padding: 12px 0;
+  position: fixed;
+  background-color: #06121f;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 /* NAV LINKS */

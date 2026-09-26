@@ -1,8 +1,9 @@
 <template>
   <main>
     <NavBar />
+    <br>
     <div class="container">
-      <div>
+      <div  data-aos="zoom-out">
         <h1 class="text-center mb-4 mt-5 text-light">Contact</h1>
         <p class="text-center">
           Let's Work Together!
