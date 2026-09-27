@@ -1,6 +1,7 @@
 <template>
     <NavBar />
-
+    <br>
+    <br>
     <section class="hero-section">
         <div class="container-lg">
             <div class="row align-items-center min-vh-100">

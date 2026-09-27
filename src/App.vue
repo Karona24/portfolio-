@@ -41,7 +41,7 @@ onMounted(() => {
   });
 });
 
-// Refresh AOS រាល់ពេលប្តូរ Page
+
 watch(() => route.path, () => {
   setTimeout(() => {
     AOS.refresh();

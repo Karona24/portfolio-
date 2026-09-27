@@ -2,6 +2,7 @@
   <main>
     <NavBar />
     <br>
+    <br>
     <div class="container">
       <div  data-aos="zoom-out">
         <h1 class="text-center mb-4 mt-5 text-light">Contact</h1>

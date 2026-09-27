@@ -1,6 +1,7 @@
 <template>
     <NavBar />
     <br>
+    <br>
     <div class="container-lg mt-5 mb-5 px-3">
         <!-- ABOUT SECTION -->
         <!-- TITLE -->
