@@ -35,7 +35,7 @@
                   </div>
 
                   <div>
-                    <h3>Our Location</h3>
+                    <h3>My Location</h3>
                     <p>608 Street</p>
                     <p>Khan Toulkok, Sangkat Berngkok ll, Phnom penh</p>
                   </div>
@@ -131,10 +131,8 @@
 
                   </div>
                 </form>
-
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -146,10 +144,10 @@
 <script setup>
 import { ref } from 'vue';
 import axios from 'axios';
+import Swal from 'sweetalert2'; 
 import FooterView from '@/components/component/FooterView.vue';
 import NavBar from '@/components/component/NavBar.vue';
 
-// 1. Reactive Variable សម្រាប់ Form
 const form = ref({
   name: '',
   email: '',
@@ -159,7 +157,6 @@ const form = ref({
 
 const loading = ref(false);
 
-// 2. Function សម្រាប់ផ្ញើសារទៅកាន់ Express Backend
 const sendToTelegram = async () => {
   loading.value = true;
 
@@ -172,12 +169,28 @@ const sendToTelegram = async () => {
     });
 
     if (response.data.success) {
-      alert('សាររបស់អ្នកត្រូវបានផ្ញើទៅកាន់ Telegram រួចរាល់!');
+      Swal.fire({
+        icon: 'success',
+        title: 'successfully!',
+        text: 'Your message has been sent to Telegram successfully!',
+        background: '#0b1823', 
+        color: '#ffffff',
+        confirmButtonColor: '#1f8fff'
+      });
+
       form.value = { name: '', email: '', subject: '', message: '' };
     }
   } catch (error) {
     console.error('Error sending message:', error);
-    alert('មានបញ្ហាក្នុងការផ្ញើសារ! សូមពិនិត្យមើលថាតើ Express Server (Node.js) កំពុងរត់ហើយឬនៅ។');
+    
+    Swal.fire({
+      icon: 'error',
+      title: 'error!',
+      text: 'Please contact us through other methods. Thank you!',
+      background: '#0b1823',
+      color: '#ffffff',
+      confirmButtonColor: '#1f8fff'
+    });
   } finally {
     loading.value = false;
   }
@@ -245,7 +258,6 @@ const sendToTelegram = async () => {
   margin-bottom: 6px;
 }
 
-/* FORM - កែប្រែដើម្បីឱ្យទាញស្រទាប់ចុចមកលើគេបំផុត */
 .custom-input {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -297,7 +309,6 @@ textarea.custom-input {
   cursor: not-allowed;
 }
 
-/* Fix អក្សរ Email ហូរលើ Screen តូច */
 .pEmail {
   font-size: 18px !important;
   word-break: break-word;
@@ -337,5 +348,20 @@ textarea.custom-input {
   .pEmail {
     font-size: 14px !important;
   }
+}
+
+.swal2-popup {
+  background: #0b1823 !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px !important;
+}
+
+.swal2-title {
+  color: #fff !important;
+}
+
+.swal2-html-container {
+  color: #b8b8b8 !important;
 }
 </style>

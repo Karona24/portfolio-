@@ -164,60 +164,60 @@ import FooterView from '@/components/component/FooterView.vue';
 const skills = [
     {
         title: "Vue JS",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 60,
+        description: "Building responsive single-page applications with reactive components and Vue Router.",
+        percent: 30,
     },
     {
         title: "JavaScript",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 50,
+        description: "Writing modern ES6+ syntax, asynchronous operations, and DOM manipulation.",
+        percent: 20,
     },
     {
         title: "Express JS",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 65,
+        description: "Creating robust RESTful APIs, managing middleware, and handling backend logic.",
+        percent: 45,
     },
     {
         title: "MySQL",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 55,
+        description: "Designing relational database schemas, running CRUD operations, and writing SQL queries.",
+        percent: 35,
     },
     {
         title: "GitHub",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 50,
+        description: "Managing version control, tracking changes, and collaborating via pull requests.",
+        percent: 30,
     },
     {
         title: "Postman",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 65,
+        description: "Testing API endpoints, inspecting HTTP responses, and debugging network requests.",
+        percent: 35,
     },
     {
         title: "Linux Security",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 40,
+        description: "Managing user permissions, configuring basic firewalls, and basic server hardening.",
+        percent: 10,
     },
     {
         title: "HTML",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 70,
+        description: "Structuring clean, semantic web layouts following modern accessibility standards.",
+        percent: 50,
     },
     {
         title: "CSS",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 65,
+        description: "Designing responsive interfaces with Flexbox, CSS Grid, and custom animations.",
+        percent: 30,
     }, 
     {
         title: "Bootstrap",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 50,
+        description: "Accelerating frontend layout building with responsive grid systems and ready-made UI components.",
+        percent: 35,
     },
     {
         title: "Figma",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-        percent: 50,
+        description: "Designing wireframes, interactive UI prototypes, and exporting digital design assets.",
+        percent: 20,
     },
-]
+];
 </script>
 
 <style scoped>
