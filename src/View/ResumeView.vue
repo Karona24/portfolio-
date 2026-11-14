@@ -317,17 +317,17 @@ const projects = ref([
     githubUrl: 'https://github.com/Karona24',
     liveUrl: 'https://kaksen-ten.vercel.app/landing/homelanding'
   },
-  {
+ {
     id: 3,
     icon: 'compass',
     year: '2025',
-    title: 'Cambodia Service Guide',
-    subtitle: 'Public & Private Service Directory',
+    title: 'NK.Computer-shope',
+    subtitle: 'E-Commerce & Tech Retail Storefront',
     description:
-      'Structured informational web platform helping citizens easily discover and navigate local services, requirements, and step-by-step documentation.',
+      'Responsive online computer store showcasing laptops, PC components, and accessories with intuitive product browsing, detailed specs, and a modern retail interface.',
     tags: ['HTML5 / CSS3', 'JavaScript', 'UI/UX'],
     githubUrl: 'https://github.com/Karona24',
-    liveUrl: '#'
+    liveUrl: 'https://computer-shop-website-nu.vercel.app/'
   }
 ]);
 </script>
