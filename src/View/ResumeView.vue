@@ -226,19 +226,19 @@ const educationList = ref([
 const skills = ref([
   {
     name: 'Backend Development',
-    percent: 65
-  },
-  {
-    name: 'Frontend Development',
-    percent: 60
-  },
-  {
-    name: 'Security',
     percent: 50
   },
   {
-    name: 'UI/UX Design',
+    name: 'Frontend Development',
     percent: 40
+  },
+  {
+    name: 'Security',
+    percent: 15
+  },
+  {
+    name: 'UI/UX Design',
+    percent: 20
   }
 ])
 
