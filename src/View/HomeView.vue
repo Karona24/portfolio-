@@ -31,12 +31,12 @@
                             </div>
 
                             <div class="hero-buttons d-flex gap-4">
-                                <a class="fancy" href="#">
+                                <RouterLink class="fancy" :to="{ name: 'resum', hash: '#featured-projects' }">
                                     <span class="top-key"></span>
                                     <span class="text">View My Work</span>
                                     <span class="bottom-key-1"></span>
                                     <span class="bottom-key-2"></span>
-                                </a>
+                                </RouterLink>
                                 <button class="continue-application" @click="$router.push({ name: 'contact' })">
                                     <div>
                                         <div class="pencil"></div>
@@ -85,7 +85,7 @@ import FooterView from '@/components/component/FooterView.vue'
 </script>
 
 <style scoped>
-/* BASE STYLES & DESKTOP (≥ 1200px) */
+/* BASE STYLES & DESKTOP (= 1200px) */
 .hero-section {
     background: #06121f;
     color: white;

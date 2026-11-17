@@ -83,7 +83,7 @@
           </div>
         </div>
       </section>
-      <section class="mb-5">
+      <section id="featured-projects" class="mb-5">
         <div class="section-header">
           <h2 class="section-title">Featured Projects Showcase</h2>
           <p class="section-subtitle">

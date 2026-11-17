@@ -8,7 +8,7 @@
       </a>
 
       <!-- TOGGLER -->
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -81,6 +81,30 @@
 </template>
 
 <style scoped>
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  border: none !important;
+  outline: none;
+  box-shadow: none !important;
+}
+
+.navbar-toggler {
+  transition: transform 0.25s ease;
+}
+
+.navbar-toggler[aria-expanded="true"] {
+  transform: rotate(90deg);
+}
+
+.navbar-toggler:active {
+  transform: scale(0.92);
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
 .navbar-custom {
   position: fixed;
   background-color: #06121f;

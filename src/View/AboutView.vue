@@ -49,12 +49,12 @@
                 <!-- BUTTONS -->
                 <div class="mt-4 button-group">
 
-                    <a class="fancy" href="#">
+                    <RouterLink class="fancy" :to="{ name: 'resum', hash: '#featured-projects' }">
                         <span class="top-key"></span>
                         <span class="text">View My Work</span>
                         <span class="bottom-key-1"></span>
                         <span class="bottom-key-2"></span>
-                    </a>
+                    </RouterLink>
 
                     <button class="continue-application" @click="$router.push({ name: 'contact' })">
                         <div>
