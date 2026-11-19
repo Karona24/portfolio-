@@ -87,7 +87,7 @@
         <div class="section-header">
           <h2 class="section-title">Featured Projects Showcase</h2>
           <p class="section-subtitle">
-            Card-based layout option for a dedicated "Projects" section or page on your portfolio.
+           Explore some of the recent work I've built and collaborated on.
           </p>
         </div>
 
@@ -186,6 +186,7 @@ const educationList = ref([
     fullName: 'Abstract of New Technology',
     description: '',
     details: [
+      'Certificate of Completion : Node.js / Express.js',
       'Certificate of Completion : JavaScript / Vue.js',
       'Transcript : HTML + HTML5 + CSS',
       'I was study Figma : UX/UI'
@@ -246,7 +247,7 @@ const skills = ref([
 const experienceList = ref([
   {
     title: 'Vue.js + Express.js',
-    date: '10 / 5 / 2026',
+    date: '5 / 10 / 2026',
     project: 'Job Discovery & Application Platform (Team Group-2)',
     tasks: [
       'Developed reusable frontend components and implemented the user interface design.',
@@ -259,7 +260,7 @@ const experienceList = ref([
   },
   {
     title: 'Vue.js',
-    date: '6 / 24 / 2026',
+    date: '24 / 6 / 2026',
     project: 'Personal Expense Tracker (Team Group-1)',
     tasks: [
       'Built reusable frontend components.',
@@ -272,7 +273,7 @@ const experienceList = ref([
   },
   {
     title: 'JavaScript',
-    date: '3 / 2 / 2026',
+    date: '2 / 3 / 2026',
     project: 'Mini-Project (Team Group-4)',
     tasks: [
       'Built reusable frontend components.',
